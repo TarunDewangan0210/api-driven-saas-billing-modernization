@@ -1,0 +1,46 @@
+{
+  "name": "saas-billing-modernization",
+  "version": "1.0.0",
+  "description": "Modern microservices-based SaaS billing system",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && npm run install:services",
+    "install:services": "cd services/customer-service && npm install && cd ../auth-service && npm install && cd ../api-gateway && npm install && cd ../subscription-service && npm install && cd ../plan-service && npm install && cd ../invoice-service && npm install",
+    "dev": "concurrently \"npm run dev:customer\" \"npm run dev:subscription\" \"npm run dev:plan\" \"npm run dev:invoice\" \"npm run dev:auth\" \"npm run dev:gateway\"",
+    "dev:customer": "cd services/customer-service && npm run dev",
+    "dev:subscription": "cd services/subscription-service && npm run dev",
+    "dev:plan": "cd services/plan-service && npm run dev",
+    "dev:invoice": "cd services/invoice-service && npm run dev",
+    "dev:auth": "cd services/auth-service && npm run dev",
+    "dev:gateway": "cd services/api-gateway && npm run dev",
+    "build": "npm run build:services",
+    "build:services": "cd services/customer-service && npm run build && cd ../subscription-service && npm run build && cd ../plan-service && npm run build && cd ../invoice-service && npm run build && cd ../auth-service && npm run build && cd ../api-gateway && npm run build",
+    "test": "npm run test:services",
+    "test:services": "cd services/customer-service && npm test && cd ../subscription-service && npm test && cd ../plan-service && npm test && cd ../invoice-service && npm test && cd ../auth-service && npm test && cd ../api-gateway && npm test",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
+    "deploy": "docker-compose -f docker-compose.prod.yml up -d --build"
+  },
+  "keywords": [
+    "saas",
+    "billing",
+    "microservices",
+    "nodejs",
+    "express",
+    "mongodb",
+    "redis",
+    "oauth2"
+  ],
+  "author": "SaaS Billing Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+} 

@@ -1,0 +1,70 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "description": "Authentication and authorization microservice for SaaS billing system",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "echo 'Auth service built'",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "keywords": [
+    "auth",
+    "oauth2",
+    "jwt",
+    "microservice",
+    "nodejs",
+    "express"
+  ],
+  "author": "SaaS Billing Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "axios": "^1.6.2",
+    "express-validator": "^7.0.1",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4",
+    "jwks-rsa": "^3.2.0",
+    "express-jwt": "^8.4.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-jwt": "^4.0.1",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0",
+    "@babel/preset-env": "^7.23.6",
+    "babel-jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/app.js"
+    ]
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "watch": [
+      "src"
+    ],
+    "ext": "js,json"
+  }
+} 
