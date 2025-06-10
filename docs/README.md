@@ -52,3 +52,12 @@ This directory contains comprehensive technical documentation for the SaaS Billi
 - JWT + scope-based authorization
 
 Complete technical blueprint for understanding, implementing, and scaling the SaaS Billing System.
+
+### 4. 🎯 [End-to-End System Diagram](./END_TO_END_SYSTEM_DIAGRAM.md)
+- Complete visual architecture
+- Technology stack tree
+- Data flow architecture
+- Service communication matrix
+- Container architecture
+- Network topology
+- Performance metrics
