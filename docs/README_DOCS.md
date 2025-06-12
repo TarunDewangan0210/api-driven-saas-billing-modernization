@@ -15,3 +15,5 @@ flowchart TD
     C3 --> D2
     C4 --> D2
     C5 --> D2
+
+![image](https://github.com/user-attachments/assets/1737d336-52d9-44ab-86fc-91f9dd2d4506)
