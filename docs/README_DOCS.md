@@ -132,8 +132,6 @@ flowchart TD
       System processes and stores updates: 3: System
 
   ![image](https://github.com/user-attachments/assets/4c1250ca-d05a-4630-aaf9-e681d11b6119)
-![image](https://github.com/user-attachments/assets/4c1250ca-d05a-4630-aaf9-e681d11b6119)
 
-![image](https://github.com/user-attachments/assets/61d949b6-ca9c-4bb6-b2cd-b9fe483668c2)
 
 
